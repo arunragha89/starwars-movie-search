@@ -20,7 +20,6 @@ const List = () => {
   }, []);
 
   useEffect(() => {
-    console.log(searchState);
     const filteredList = state.filter((movie) => {
       return movie.title.indexOf(searchState) > -1;
     });

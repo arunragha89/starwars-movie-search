@@ -26,11 +26,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 5. Created hooks for reuse of code across components
 6. State of the application is preserved by loading the data required for the component in the component itself instead of depending on the value passed to the component.
 7. A simple UI with all the required data shown in a same page to give a good user experience.
+8. Implemented Unit tests to test user behaviour. Run **npm run test** to execute unit test cases
 
 ## Improvements
 
 1. Adding Accessibility for the component as per guidelines
 2. Adding more unit test cases using react testing library to test the user behaviour
 3. Increase search performance with throttling and debouncing
-4. Preserve state with the search data, only characters state is preserved now
-5. Make the page more responsive by showing the character details below the movie for smaller screens
+4. Make the page more responsive by showing the character details below the movie for smaller screens
