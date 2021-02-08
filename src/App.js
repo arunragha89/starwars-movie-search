@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+
+import { Provider as MovieProvider } from "./context/MovieContext";
+import { Provider as SearchProvider } from "./context/SearchContext";
+
+import Header from "./components/Header";
+import Characters from "./components/Characters";
+import List from "./components/List";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col p-4 bg-gray-50  ">
+      <MovieProvider>
+        <SearchProvider>
+          <BrowserRouter>
+            <Header />
+            <main className="main flex">
+              <Route path="/" component={List} />
+              <Route path="/characters/:id" exact component={Characters} />
+            </main>
+          </BrowserRouter>
+        </SearchProvider>
+      </MovieProvider>
     </div>
   );
 }

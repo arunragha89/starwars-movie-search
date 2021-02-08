@@ -2,69 +2,35 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Steps to execute the application
 
-In the project directory, you can run:
+1. Install node 12.13.0 and greater
+2. Run npm install
+3. Run npm run start
+4. Open http://localhost:3000/
 
-### `yarn start`
+## Features Implemented
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Movie dashboard when You Open the homepage.
+2. Click on a a particular movie to see the characters in the movie.
+3. Search through the movies with the search bar and select the movies with keyboard/mouse.
+4. Autocomplete feature enabled on search bar
+5. Once you click on the movie after selection, share the link from the browser to anyone.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Code structure and libraries used
 
-### `yarn test`
+1. Tailwind css as it is a utility first framework and provides faster development and optimized for production
+2. Created a separate helper calls for api calls using native fetch api
+3. Used context and useReducer for state management
+4. Created a common library - createDataContext.js which returns context and provider component
+5. Created hooks for reuse of code across components
+6. State of the application is preserved by loading the data required for the component in the component itself instead of depending on the value passed to the component.
+7. A simple UI with all the required data shown in a same page to give a good user experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Improvements
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Adding Accessibility for the component as per guidelines
+2. Adding more unit test cases using react testing library to test the user behaviour
+3. Increase search performance with throttling and debouncing
+4. Preserve state with the search data, only characters state is preserved now
+5. Make the page more responsive by showing the character details below the movie for smaller screens
